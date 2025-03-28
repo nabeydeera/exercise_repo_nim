@@ -1,0 +1,15 @@
+testCase1: 
+- abc@gmail.com
+- password1
+testCase2:
+- bcd@gmail.com
+- password2
+testCase3:
+- cde@gmail.com
+- password3
+testCase4:
+- def@gmail.com
+- password4
+testCase5:
+- efg@gmail.com
+- password5
