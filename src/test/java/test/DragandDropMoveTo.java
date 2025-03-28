@@ -18,7 +18,7 @@ public class DragandDropMoveTo {
 	static WebDriver driver;
 	 static BrowserNavigation browser;
 	 
-	//Using Action class dranAndDrom method
+	//Using Action class dragAndDrop method
 	/*
 	 * public static void main(String[] args) throws InterruptedException { browser
 	 * = new BrowserNavigation(); browser.openbrowser("Chrome",
