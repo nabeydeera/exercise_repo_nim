@@ -71,14 +71,19 @@ public class WindowHandle {
 	 
 	public static void main(String[] args) throws InterruptedException {
 		  browser = new BrowserNavigation();
+		  
 		//To block ads tried to use chromeOptions
-		  ChromeOptions cOptions = new ChromeOptions();
+		 /* ChromeOptions cOptions = new ChromeOptions();
 		  File file = new File("C:\\Selenium\\Edureka\\Workspace\\Data-Driven-AssignmentTen\\drivers\\AdBlock.crx");
 		  cOptions.addExtensions(file);
 		  driver = new ChromeDriver(cOptions);
 		  driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
-		 // browser.openbrowser("Chrome", "https://www.hyrtutorials.com/p/window-handles-practice.html");
-		 // driver = browser.getDriver();
+		  */
+		  
+		  //using the BrowserNavigation class to initiate the Chrome browser:
+		  browser = new BrowserNavigation();
+		  browser.openbrowser("Chrome", "https://www.hyrtutorials.com/p/window-handles-practice.html");
+		  driver = browser.getDriver();
 		  
 		  parentWindow = driver.getWindowHandle();
 		  System.out.println("Parent Window: "+parentWindow);
@@ -91,10 +96,10 @@ public class WindowHandle {
 		  Thread.sleep(3000);
 		  
 		  //open new tab
-		  openNewTab();
+		 /* openNewTab();
 		  Thread.sleep(3000);
 		  driver.switchTo().window(parentWindow);
-
+		  */
 		  
 		  
 		  
@@ -106,7 +111,7 @@ public class WindowHandle {
 		  //openMultipleWindowsandTabs();
 		  
 		  //Thread.sleep(4000);
-		  // browser.quitBrowser();
+		  browser.quitBrowser();
 
 	}
 }
