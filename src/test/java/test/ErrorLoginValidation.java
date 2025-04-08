@@ -10,7 +10,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.yaml.snakeyaml.Yaml;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
+
 import pom.BravenetLoginPage;
+import util.ExtentReportClass;
 
 public class ErrorLoginValidation extends Base{
 
@@ -25,10 +28,12 @@ public class ErrorLoginValidation extends Base{
 		return list;
 	}
 	@Test
-	public void verifyLoginError() {
+	public void verifyLoginError() throws Exception {
 
 		BravenetLoginPage login = new BravenetLoginPage(driver);
+		ExtentReportClass report = new ExtentReportClass(extent);
 		String testCaseNumber = "";
+		
 		for(int i=1; i<=4; i++){ 
 			testCaseNumber="testCase"+i;
 			//reads the value from the key value pair from the yaml file
@@ -40,6 +45,9 @@ public class ErrorLoginValidation extends Base{
 			System.out.println("Error message '"+expectedError+"' displayed.");
 			//validate the error message
 			Assert.assertTrue(expectedError.equals("You must login with your username"));
-		}	
+			
+		}
+		//take the screenshot and store
+		report.extentReportTest1("verifyLoginError");
 	}
 }
