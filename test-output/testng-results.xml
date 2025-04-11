@@ -2,16 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-08T19:04:43 EDT" name="Default suite" finished-at="2025-04-08T19:04:43 EDT" duration-ms="79">
+  <suite started-at="2025-04-10T15:46:05 EDT" name="Default suite" finished-at="2025-04-10T15:46:17 EDT" duration-ms="12443">
     <groups>
     </groups>
-    <test started-at="2025-04-08T19:04:43 EDT" name="Default test" finished-at="2025-04-08T19:04:43 EDT" duration-ms="79">
-      <class name="test.interviewQuestionCodes">
-        <test-method signature="reverseList()[pri:0, instance:test.interviewQuestionCodes@37918c79]" started-at="2025-04-08T19:04:43 EDT" name="reverseList" finished-at="2025-04-08T19:04:43 EDT" duration-ms="15" status="PASS">
+    <test started-at="2025-04-10T15:46:05 EDT" name="Default test" finished-at="2025-04-10T15:46:17 EDT" duration-ms="12443">
+      <class name="test.ExecuteXpath">
+        <test-method is-config="true" signature="beforeRun()[pri:0, instance:test.ExecuteXpath@45018215]" started-at="2025-04-10T15:46:05 EDT" name="beforeRun" finished-at="2025-04-10T15:46:11 EDT" duration-ms="6234" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- reverseList -->
-      </class> <!-- test.interviewQuestionCodes -->
+        </test-method> <!-- beforeRun -->
+        <test-method signature="assertTest()[pri:0, instance:test.ExecuteXpath@45018215]" started-at="2025-04-10T15:46:11 EDT" name="assertTest" finished-at="2025-04-10T15:46:11 EDT" duration-ms="124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assertTest -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:test.ExecuteXpath@45018215]" started-at="2025-04-10T15:46:11 EDT" name="quitBrowser" finished-at="2025-04-10T15:46:17 EDT" duration-ms="6012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- test.ExecuteXpath -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

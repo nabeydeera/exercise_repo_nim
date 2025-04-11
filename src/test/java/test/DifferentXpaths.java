@@ -12,6 +12,12 @@ public class DifferentXpaths {
 	BrowserNavigation browser;
 	WebDriver driver;
 
+	// //tagname[@attribute = ‘value’]
+	// //input[contains(@id, 'fakebox')]
+	// //input[starts-with(@id, 'fakebox')]
+	// From <ul> <li> <label> <input> --> //ul//input <-- will get to input section in DOM directly
+	// //input[@value = 'Log In' or @type = 'submit']
+	
 	@CacheLookup
 	@FindBy(xpath = "//h2[text()='Get started for free']") WebElement headerTxt;
 	@CacheLookup
