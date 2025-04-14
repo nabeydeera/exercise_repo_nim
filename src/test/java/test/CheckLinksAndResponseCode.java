@@ -26,25 +26,28 @@ public class CheckLinksAndResponseCode {
 			browser.openbrowser("Chrome", url);
 			driver = browser.getDriver();
 			
+			System.out.println("Main page title: "+driver.getTitle());
 			List<WebElement> allLinks = driver.findElements(By.tagName("a"));
 			System.out.println("Total links with tagName a: "+allLinks.size());
 			
 			for (int i = 0; i < allLinks.size(); i++) {
 				WebElement element = allLinks.get(i);
 				String link = element.getAttribute("href");
-				
+				String linkText = element.getText();
+			
 				//some a tags are returning null as they don't have a href
 				//check if the URL is not null and has http in the url
 				//there are some links for telephone number and email addresses
 				if (link!=null && link.contains("http")) {
-						verifyLinks(link,i);
+					
+						verifyLinks(link,i,linkText);
 				}
 			}
 			
 			browser.quitBrowser();
 	}
 	
-	public static void verifyLinks(String linkURL, int a) throws MalformedURLException { 
+	public static void verifyLinks(String linkURL, int a, String linkTxt) throws MalformedURLException { 
 			try {
 			//URL actualUrl = connection.linkURL(); --this is not needed as we can use new URL in below line it self
 			HttpURLConnection connection = (HttpURLConnection) new URL(linkURL).openConnection();
@@ -52,8 +55,8 @@ public class CheckLinksAndResponseCode {
 			connection.connect();
 
 			if (connection.getResponseCode()==200) {
-				System.out.println(a+" For the link-> "+linkURL+" - "+connection.getResponseCode()+connection.getResponseMessage()); 
-				System.out.println("The page source :"+driver.getPageSource());
+				System.out.println(a+" For the link-> "+linkURL+" - "+connection.getResponseCode()+connection.getResponseMessage()+" - LinkText: "+linkTxt); 
+				
 			}
 			if(connection.getResponseCode()==HttpURLConnection.HTTP_NOT_FOUND) {
 				
