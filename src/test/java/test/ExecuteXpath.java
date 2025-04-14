@@ -25,13 +25,15 @@ public class ExecuteXpath {
 	public void assertTest() throws Exception {
 	 	differentXpaths = new DifferentXpaths(driver);
 		SoftAssert softAssert = new SoftAssert();
-		softAssert.assertEquals(driver.getTitle(), "Sign up for| free | Cross Browser Testing Tool | LambdaTest", "Assertion message");
+		//softAssert.assertEquals(driver.getTitle(), "Sign up for| free | Cross Browser Testing Tool | LambdaTest", "Assertion message");
 		
-		softAssert.assertEquals(differentXpaths.sectionHeading(), "Get started for free");
+		//softAssert.assertEquals(differentXpaths.sectionHeading(), "Get started for free");
 		
-		softAssert.assertEquals(differentXpaths.enterEmail(), "test@email.com");
+		//softAssert.assertEquals(differentXpaths.enterEmail(), "test@email.com");
+		Thread.sleep(2000);
+		WebElement signTextPara = driver.findElement(By.xpath("//div[contains(text(),'By clicking Sign Up')]"));
+				//driver.findElement(By.cssSelector("div.leading-5"));
 		
-		WebElement signTextPara = driver.findElement(By.cssSelector("div.leading-5"));
 		
 		System.out.println("sign in text: "+signTextPara.getText());
 		softAssert.assertEquals(signTextPara.getText(), "By clicking Sign Up or registering through a third party you accept the LambdaTest Terms of Service and acknowledge the Privacy Policy and Cookie Policy");

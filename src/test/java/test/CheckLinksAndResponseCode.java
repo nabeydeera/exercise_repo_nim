@@ -53,8 +53,10 @@ public class CheckLinksAndResponseCode {
 
 			if (connection.getResponseCode()==200) {
 				System.out.println(a+" For the link-> "+linkURL+" - "+connection.getResponseCode()+connection.getResponseMessage()); 
+				System.out.println("The page source :"+driver.getPageSource());
 			}
 			if(connection.getResponseCode()==HttpURLConnection.HTTP_NOT_FOUND) {
+				
 				System.out.println(a+" For the link: "+linkURL+" - "+connection.getResponseCode()+connection.getResponseMessage()); 
 			}
 		} catch (MalformedURLException e) {

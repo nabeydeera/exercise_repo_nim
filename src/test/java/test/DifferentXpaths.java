@@ -30,7 +30,9 @@ public class DifferentXpaths {
 	@CacheLookup
 	@FindBy(xpath = "//span[text()='Show']") WebElement txtShowHide;
 	@CacheLookup
-	@FindBy(css = "div.leading-5") WebElement signUpText; //long text that was divided into multiple tags
+	//@FindBy(css = "div.leading-5") WebElement signUpText; //long text that was divided into multiple tags
+	@FindBy(xpath = "//div[contains(text(),'By clicking Sign Up)']") WebElement signUpText;
+	//xpath = "//div[starts-with(text(),'By clicking Sign Up')]"
 	@CacheLookup
 	@FindBy(css = "button[type='submit']") WebElement btnSignUp;
 
@@ -46,7 +48,8 @@ public class DifferentXpaths {
 
 	public String enterEmail() {
 		String email = "test@email.com";
-		txtEmail.sendKeys(email);		
+		txtEmail.sendKeys(email);	
+		System.out.println("Entered Text in the email field: "+txtEmail.getAttribute("value"));
 		return email;
 	}
 	
