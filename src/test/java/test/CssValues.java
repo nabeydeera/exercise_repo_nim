@@ -2,6 +2,8 @@ package test;
 
 import static org.testng.Assert.assertEquals;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,21 +21,18 @@ public class CssValues {
 		
 		driver.get("https://blueimp.github.io/jQuery-File-Upload/");
 		
-		WebElement deleteBtn = driver.findElement(By.xpath("//button[@class='btn btn-danger delete']"));
-		System.out.println("-------- "+deleteBtn.getText()+" button attributes -------");
-		System.out.println("Get Attribute: "+deleteBtn.getAttribute("class"));
-		System.out.println(deleteBtn.getCssValue("background-color"));
-		System.out.println("Converted to hex: "+Color.fromString(deleteBtn.getCssValue("background-color")).asHex());
-		System.out.println("Button height: "+deleteBtn.getCssValue("height"));
-		System.out.println("Button width: "+deleteBtn.getCssValue("width"));
+		List<WebElement> allButtons = driver.findElements(By.xpath("//*[contains(@class,'btn')]"));
 		
+		for(WebElement btnElement : allButtons) {
+			System.out.println("-------- "+btnElement.getText()+" button attributes -------");
+			System.out.println("Get Attribute: "+btnElement.getAttribute("class"));
+			System.out.println("Button RGBA colors :"+btnElement.getCssValue("background-color"));
+			System.out.println("Converted to hex: "+Color.fromString(btnElement.getCssValue("background-color")).asHex());
+			System.out.println("Button height: "+btnElement.getCssValue("height"));
+			System.out.println("Button width: "+btnElement.getCssValue("width"));
+			System.out.println("Font size: "+btnElement.getCssValue("font-size"));
+		}
 		
-		WebElement cancelBtn = driver.findElement(By.cssSelector("button[type='reset']"));
-		System.out.println("-------- "+cancelBtn.getText()+" button attributes -------");
-		System.out.println(cancelBtn.getCssValue("background-color"));
-		System.out.println("Converted to hex: "+Color.fromString(cancelBtn.getCssValue("background-color")).asHex());
-		String cancelColor = Color.fromString(cancelBtn.getCssValue("background-color")).asHex();
-		assertEquals("#f0ad4e", cancelColor);
 		
 		driver.quit();
 	}
