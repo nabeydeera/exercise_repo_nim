@@ -23,6 +23,7 @@ public class ShadowDom {
 		searchText.sendKeys("Name to search");
 		
 		System.out.println("Finished");
+		Thread.sleep(2000);
 		driver.quit();
 		
 		

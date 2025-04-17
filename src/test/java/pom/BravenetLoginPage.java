@@ -3,6 +3,7 @@ package pom;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -112,7 +113,7 @@ public class BravenetLoginPage {
 	}
 
 	public void cookiesContainer() {
-		WebDriverWait wait = new WebDriverWait(driver, 50);
+		WebDriverWait wait = new WebDriverWait(driver, 30);//new WebDriverWait(driver, Duration.ofSeconds(50));
 		WebElement closeIcon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//i[contains(text(),'close')]")));
 		closeIcon.click();
 	}

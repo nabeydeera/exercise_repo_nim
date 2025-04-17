@@ -22,7 +22,7 @@ public class FileUpload {
 		  WebElement addFilesBtn = driver.findElement(By.xpath("//input[@type='file']"));
 		  
 		  //1. Give file in File class and then getAbsolute path to the file
-		  File file = new File("./target/SignIn page.png");
+		  File file = new File("./test-output/failed.png");
 		  System.out.println(file.getAbsolutePath());
 		  addFilesBtn.sendKeys(file.getAbsolutePath());
 		  

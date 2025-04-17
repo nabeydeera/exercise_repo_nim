@@ -2,7 +2,8 @@ package test;
 
 import java.awt.AWTException;
 import java.io.InputStream;
-	import java.util.ArrayList;
+import java.time.Duration;
+import java.util.ArrayList;
 	import java.util.Map;
 	import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -38,7 +39,7 @@ public class HandlingKeyboardKeys extends Base{
 				//reads the value from the key value pair from the yaml file
 				login.loginUsingKeyboardKeys(String.valueOf(readYamlFile(testCaseNumber).get(0)), String.valueOf(readYamlFile(testCaseNumber).get(1)));
 				//wait for the error message after login is clicked
-				WebDriverWait wait = new WebDriverWait(driver, 10);
+				WebDriverWait wait = new WebDriverWait(driver, 30); //new WebDriverWait(driver, Duration.ofSeconds(30));
 				wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//span[contains(text(),'You must login with your username')]"))));
 				String expectedError = driver.findElement(By.xpath("//span[contains(text(),'You must login with your username')]")).getText();
 				System.out.println("Error message '"+expectedError+"' displayed.");
