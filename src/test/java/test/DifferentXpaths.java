@@ -1,5 +1,6 @@
 package test;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.SendKeysAction;
@@ -12,11 +13,14 @@ public class DifferentXpaths {
 	BrowserNavigation browser;
 	WebDriver driver;
 
-	// //tagname[@attribute = ‘value’]
+	// //tagname[@attribute = ï¿½valueï¿½]
 	// //input[contains(@id, 'fakebox')]
 	// //input[starts-with(@id, 'fakebox')]
 	// From <ul> <li> <label> <input> --> //ul//input <-- will get to input section in DOM directly
 	// //input[@value = 'Log In' or @type = 'submit']
+	
+	//Css:
+		//By.cssSelector("div.widget-content>ol>li:last-of-type") -->check PracticeDifferentElements.java script
 	
 	@CacheLookup
 	@FindBy(xpath = "//h2[text()='Get started for free']") WebElement headerTxt;
