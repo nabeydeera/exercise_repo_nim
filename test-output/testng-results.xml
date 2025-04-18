@@ -2,28 +2,36 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-16T18:46:38 EDT" name="Default suite" finished-at="2025-04-16T18:46:38 EDT" duration-ms="107">
+  <suite started-at="2025-04-18T18:17:31 EDT" name="Default suite" finished-at="2025-04-18T18:17:41 EDT" duration-ms="10129">
     <groups>
     </groups>
-    <test started-at="2025-04-16T18:46:38 EDT" name="Default test" finished-at="2025-04-16T18:46:38 EDT" duration-ms="107">
-      <class name="test.TestExecutionOrder">
-        <test-method signature="finalOption()[pri:0, instance:test.TestExecutionOrder@710f4dc7]" started-at="2025-04-16T18:46:38 EDT" name="finalOption" finished-at="2025-04-16T18:46:38 EDT" duration-ms="17" status="PASS">
+    <test started-at="2025-04-18T18:17:31 EDT" name="Default test" finished-at="2025-04-18T18:17:41 EDT" duration-ms="10129">
+      <class name="test.PracticeDifferentElements">
+        <test-method is-config="true" signature="openBrowserForTest()[pri:0, instance:test.PracticeDifferentElements@63475ace]" started-at="2025-04-18T18:17:31 EDT" name="openBrowserForTest" finished-at="2025-04-18T18:17:34 EDT" duration-ms="3191" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- finalOption -->
-        <test-method signature="getpayment()[pri:0, instance:test.TestExecutionOrder@710f4dc7]" started-at="2025-04-16T18:46:38 EDT" name="getpayment" finished-at="2025-04-16T18:46:38 EDT" duration-ms="2" status="PASS">
+        </test-method> <!-- openBrowserForTest -->
+        <test-method signature="hiddenElementClick()[pri:0, instance:test.PracticeDifferentElements@63475ace]" started-at="2025-04-18T18:17:34 EDT" name="hiddenElementClick" finished-at="2025-04-18T18:17:34 EDT" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getpayment -->
-        <test-method signature="openBrowser()[pri:0, instance:test.TestExecutionOrder@710f4dc7]" started-at="2025-04-16T18:46:38 EDT" name="openBrowser" finished-at="2025-04-16T18:46:38 EDT" duration-ms="2" status="PASS">
+        </test-method> <!-- hiddenElementClick -->
+        <test-method signature="inputBox()[pri:0, instance:test.PracticeDifferentElements@63475ace]" started-at="2025-04-18T18:17:34 EDT" name="inputBox" finished-at="2025-04-18T18:17:41 EDT" duration-ms="6291" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method signature="closed()[pri:1, instance:test.TestExecutionOrder@710f4dc7]" started-at="2025-04-16T18:46:38 EDT" name="closed" finished-at="2025-04-16T18:46:38 EDT" duration-ms="3" status="PASS">
+        </test-method> <!-- inputBox -->
+        <test-method signature="linkTextofLinks()[pri:0, instance:test.PracticeDifferentElements@63475ace]" started-at="2025-04-18T18:17:41 EDT" name="linkTextofLinks" finished-at="2025-04-18T18:17:41 EDT" duration-ms="277" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closed -->
-      </class> <!-- test.TestExecutionOrder -->
+        </test-method> <!-- linkTextofLinks -->
+        <test-method signature="nthType()[pri:0, instance:test.PracticeDifferentElements@63475ace]" started-at="2025-04-18T18:17:41 EDT" name="nthType" finished-at="2025-04-18T18:17:41 EDT" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nthType -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:test.PracticeDifferentElements@63475ace]" started-at="2025-04-18T18:17:41 EDT" name="browserClose" finished-at="2025-04-18T18:17:41 EDT" duration-ms="267" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClose -->
+      </class> <!-- test.PracticeDifferentElements -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
