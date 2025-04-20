@@ -6,14 +6,19 @@ import java.net.URL;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Page404Error {
+public class Page404ErrorHeadless {
 
 	public static void main(String[] args) throws IOException {
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		
+		//run in headless browser:
+		ChromeOptions options = new ChromeOptions(); 
+		options.addArguments("--headless");
+		WebDriver driver = new ChromeDriver(options);
 		String url = "http://example.com/some404page";
 		driver.get(url);
 		//System.out.println(driver.getPageSource()); //this does not give the response code 404
