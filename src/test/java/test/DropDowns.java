@@ -29,7 +29,7 @@ public class DropDowns {
 		multiSelect.selectByIndex(1);
 		multiSelect.selectByVisibleText("Dancing");
 		System.out.println("The selected option for index 2: "+multiSelect.getFirstSelectedOption().getText());
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		
 		//Print the values in the drop down
 		List<WebElement> options = multiSelect.getOptions();
@@ -37,11 +37,14 @@ public class DropDowns {
 			System.out.println("Print option "+i+" : "+options.get(i).getText());
 			multiSelect.selectByIndex(i);
 		}
-		Thread.sleep(5000);
+		
+		synchronized (driver) {
+			driver.wait(3000);	
+			}
 		multiSelect.deselectAll();
 		
 		
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		browser.quitBrowser();
 		
 		
