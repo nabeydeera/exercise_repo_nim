@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import util.BrowserNavigation;
 
-public class DropDowns {
+public class DropDownsSynchronized {
 	static BrowserNavigation browser;
 	static WebDriver driver;
 
@@ -38,13 +38,13 @@ public class DropDowns {
 			multiSelect.selectByIndex(i);
 		}
 		
+		//pause test execution instead of thread.sleep
 		synchronized (driver) {
 			driver.wait(3000);	
 			}
 		multiSelect.deselectAll();
 		
 		
-		//Thread.sleep(3000);
 		browser.quitBrowser();
 		
 		
