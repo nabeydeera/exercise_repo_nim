@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\nimeka\AppData\Local\Temp\testng-eclipse-1392031394\testng-customsuite.xml</span>
+                    <span>C:\Users\nimeka\AppData\Local\Temp\testng-eclipse--818649895\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="test.ExecuteXpathSoftAssert" class="method navigator-link" hash-for-method="assertTest">assertTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="test.RefreshPageCommands" class="method navigator-link" hash-for-method="five">five</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,14 +121,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">test.ExecuteXpathSoftAssert</span>
+              <span class="class-name">test.RefreshPageCommands</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="assertTest">
-                  </a> <!-- assertTest -->
-                  <span class="method-name">assertTest</span>
+                  <a name="five">
+                  </a> <!-- five -->
+                  <span class="method-name">five</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +136,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\nimeka\AppData\Local\Temp\testng-eclipse-1392031394\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\nimeka\AppData\Local\Temp\testng-eclipse--818649895\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,7 +145,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test.ExecuteXpathSoftAssert&quot;/&gt;
+      &lt;class name=&quot;test.RefreshPageCommands&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;five&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- test.RefreshPageCommands --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -187,14 +191,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'assertTest')
-data.setCell(0, 2, 'test.ExecuteXpathSoftAssert')
-data.setCell(0, 3, 2179);
+data.setCell(0, 1, 'five')
+data.setCell(0, 2, 'test.RefreshPageCommands')
+data.setCell(0, 3, 847);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 847 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -209,9 +213,22 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">test.RefreshPageCommands</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">two</span>
+                <br/>
+                <span class="ignored-method-name">one</span>
+                <br/>
+                <span class="ignored-method-name">three</span>
+                <br/>
+                <span class="ignored-method-name">four</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -220,18 +237,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test.ExecuteXpathSoftAssert</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.RefreshPageCommands</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">beforeRun</span>
+                <span class="method-name">openBrowserForTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">assertTest</span>
-                <span class="method-start">2813 ms</span>
+                <span class="method-name">five</span>
+                <span class="method-start">3999 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
-                <span class="method-name">quitBrowser</span>
-                <span class="method-start">4996 ms</span>
+                <span class="method-name">browserClose</span>
+                <span class="method-start">4851 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
