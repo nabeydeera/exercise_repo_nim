@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.PracticeDifferentElements">
+      <class name="test.ExecuteXpathSoftAssert">
         <methods>
-          <include name="openBrowserForTest"/>
-          <include name="browserClose"/>
-          <include name="inputBox"/>
+          <include name="beforeRun"/>
+          <include name="quitBrowser"/>
+          <include name="assertTest"/>
         </methods>
-      </class> <!-- test.PracticeDifferentElements -->
+      </class> <!-- test.ExecuteXpathSoftAssert -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
