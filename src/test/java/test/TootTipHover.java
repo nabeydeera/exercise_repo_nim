@@ -25,14 +25,16 @@ public class TootTipHover {
 		  
 		  //take the title attribute and print before Actions class if the toot tip text goes away when hover over
 		  System.out.println("Tool Tip text: "+tooltipText.getAttribute("title"));
+		  
+		  /* Scroll on the page using moveToElement or scrollIntoView */
 //		  Actions a = new Actions(driver);
 //		  a.moveToElement(tooltipText).build().perform();
-  
 		  JavascriptExecutor js = (JavascriptExecutor)driver;
-		//  js.executeScript("window.scrollTo(0,900)"); //not working. use movetoelement instead
-		// js.executeScript("arguments[0].scrollIntoView(true)", tooltipText);
-		 js.executeScript("window.scroll(0,2500)"); 
+		//js.executeScript("arguments[0].scrollIntoView(true)", tooltipText); //this is working
 		  
+		 //js.executeScript("window.scrollTo(0,900);"); //not working. use movetoelement or scrollIntoView
+		
+		// js.executeScript("window.scrollBy(0,1000);"); //not working
 		  Thread.sleep(5000);
 		  browser.quitBrowser();
 
