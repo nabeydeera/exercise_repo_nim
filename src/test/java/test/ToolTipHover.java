@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import util.BrowserNavigation;
 
-public class TootTipHover {
+public class ToolTipHover {
 
 	static WebDriver driver;
 	 static BrowserNavigation browser;
