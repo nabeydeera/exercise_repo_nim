@@ -1,5 +1,7 @@
 package test;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap.KeySetView;
@@ -40,7 +42,7 @@ public class PracticeDifferentElements {
 	}
 	
 	//How to interact with input box giving coordinates to click at a position
-	@Test
+	@Test(enabled = false)
 	public void inputBox() throws InterruptedException {
 		WebElement inputB = driver.findElement(By.xpath("//input[@name='textboxn']"));
 		Actions a = new Actions(driver);
@@ -49,18 +51,19 @@ public class PracticeDifferentElements {
 
 				inputB.sendKeys("Testing inputbox"+Keys.ENTER);
 				Thread.sleep(3000);
+				System.out.println("Interact with input box with x,y coordinates");
 				
 	}
 	
 	//using nth-of-type in CSS selector
-	@Test
+	@Test(enabled = false)
 	public void nthType() {
 		WebElement listEle = driver.findElement(By.cssSelector("div.widget-content>ol>li:last-of-type"));
-		System.out.println("Ordered list last text: "+listEle.getText());
+		System.out.println("Ordered list last text with last-of-type: "+listEle.getText());
 	}
 	
 	//Get the link text of the links on a web page
-	@Test
+	@Test(enabled = false)
 	public void linkTextofLinks() {
 		List<WebElement> allLinks = driver.findElements(By.tagName("a"));
 		
@@ -71,6 +74,32 @@ public class PracticeDifferentElements {
 			System.out.println("Title of link : "+(linkName.isEmpty() ? "No Text" : linkName ));
 			
 		}
+	}
+	
+	//right click on an element - using Actions class
+	@Test
+	public void rightClick() throws InterruptedException {
+		System.out.println("---right click on an element---");
+		WebElement clickLink = driver.findElement(By.linkText("testwisely"));
+		
+		Actions a = new Actions(driver);
+		a.contextClick(clickLink).build().perform();
+		Thread.sleep(3000);
+	}
+	
+	//double click on an element - using Actions class and close the alert
+	@Test
+	public void doubleClick() throws InterruptedException {
+		System.out.println("---Double click on an element---");
+		WebElement doubleclickBtn = driver.findElement(By.xpath("//button[contains(text(),' Double click Here')]"));
+		
+		Actions a = new Actions(driver);
+		a.doubleClick(doubleclickBtn).build().perform();
+		Thread.sleep(3000);
+		if(driver.switchTo().alert() != null) {
+			driver.switchTo().alert().accept();
+			
+		}else System.out.println("No alert present");
 	}
 	
 	@AfterTest

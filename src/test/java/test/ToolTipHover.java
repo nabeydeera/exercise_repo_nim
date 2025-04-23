@@ -3,6 +3,7 @@ package test;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,6 +20,7 @@ public class ToolTipHover {
 		  browser = new BrowserNavigation();
 		  browser.openbrowser("Chrome", "https://jqueryui.com/tooltip/");
 		  driver = browser.getDriver();
+		  driver.manage().window().setSize(new Dimension(500, 700));
 
 		  driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='demo-frame']")));
 		  WebElement tooltipText = driver.findElement(By.xpath("//a[normalize-space()='Tooltips']"));
@@ -30,11 +32,11 @@ public class ToolTipHover {
 //		  Actions a = new Actions(driver);
 //		  a.moveToElement(tooltipText).build().perform();
 		  JavascriptExecutor js = (JavascriptExecutor)driver;
-		//js.executeScript("arguments[0].scrollIntoView(true)", tooltipText); //this is working
+		js.executeScript("arguments[0].scrollIntoView(true)", tooltipText); //this is working
 		  
 		 //js.executeScript("window.scrollTo(0,900);"); //not working. use movetoelement or scrollIntoView
 		
-		// js.executeScript("window.scrollBy(0,1000);"); //not working
+		//js.executeScript("window.scrollBy(0,100)"); //not working
 		  Thread.sleep(5000);
 		  browser.quitBrowser();
 
