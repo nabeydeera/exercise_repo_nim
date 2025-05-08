@@ -8,6 +8,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BrowserNavigation {
 	WebDriver driver;
 
@@ -15,8 +17,10 @@ public class BrowserNavigation {
 		String currDir = System.getProperty("user.dir");
 
 		if(browser.equalsIgnoreCase("Chrome")) {
-			System.setProperty("webdriver.chrome.driver", currDir+"\\drivers\\chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver", currDir+"\\drivers\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver(); 
+			
 		}
 
 		else if(browser.equalsIgnoreCase("Edge")) {
