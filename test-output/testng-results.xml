@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-25T18:19:41 EDT" name="Default suite" finished-at="2025-04-25T18:19:58 EDT" duration-ms="16040">
+  <suite started-at="2025-05-02T15:08:22 EDT" name="Default suite" finished-at="2025-05-02T15:08:24 EDT" duration-ms="2242">
     <groups>
     </groups>
-    <test started-at="2025-04-25T18:19:41 EDT" name="Default test" finished-at="2025-04-25T18:19:58 EDT" duration-ms="16040">
-      <class name="test.interviewQuestionCodes">
-        <test-method signature="largerNumber()[pri:0, instance:test.interviewQuestionCodes@7eac9008]" started-at="2025-04-25T18:19:42 EDT" name="largerNumber" finished-at="2025-04-25T18:19:49 EDT" duration-ms="7137" status="PASS">
+    <test started-at="2025-05-02T15:08:22 EDT" name="Default test" finished-at="2025-05-02T15:08:24 EDT" duration-ms="2242">
+      <class name="test.ErrorLoginValidation">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:test.ErrorLoginValidation@587e5365]" started-at="2025-05-02T15:08:15 EDT" name="beforeTest" finished-at="2025-05-02T15:08:22 EDT" duration-ms="6891" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- largerNumber -->
-        <test-method signature="oddNumber()[pri:0, instance:test.interviewQuestionCodes@7eac9008]" started-at="2025-04-25T18:19:49 EDT" name="oddNumber" finished-at="2025-04-25T18:19:58 EDT" duration-ms="8844" status="PASS">
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyLoginError()[pri:0, instance:test.ErrorLoginValidation@587e5365]" started-at="2025-05-02T15:08:22 EDT" name="verifyLoginError" finished-at="2025-05-02T15:08:24 EDT" duration-ms="2170" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- oddNumber -->
-        <test-method signature="productOfNumber()[pri:0, instance:test.interviewQuestionCodes@7eac9008]" started-at="2025-04-25T18:19:58 EDT" name="productOfNumber" finished-at="2025-04-25T18:19:58 EDT" duration-ms="2" status="PASS">
+        </test-method> <!-- verifyLoginError -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:test.ErrorLoginValidation@587e5365]" started-at="2025-05-02T15:08:24 EDT" name="afterTest" finished-at="2025-05-02T15:08:25 EDT" duration-ms="1007" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- productOfNumber -->
-        <test-method signature="reverseList()[pri:0, instance:test.interviewQuestionCodes@7eac9008]" started-at="2025-04-25T18:19:58 EDT" name="reverseList" finished-at="2025-04-25T18:19:58 EDT" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reverseList -->
-      </class> <!-- test.interviewQuestionCodes -->
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.ErrorLoginValidation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
