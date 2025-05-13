@@ -2,24 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-02T15:08:22 EDT" name="Default suite" finished-at="2025-05-02T15:08:24 EDT" duration-ms="2242">
+  <suite started-at="2025-05-13T17:05:40 EDT" name="Default suite" finished-at="2025-05-13T17:05:44 EDT" duration-ms="4174">
     <groups>
     </groups>
-    <test started-at="2025-05-02T15:08:22 EDT" name="Default test" finished-at="2025-05-02T15:08:24 EDT" duration-ms="2242">
-      <class name="test.ErrorLoginValidation">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:test.ErrorLoginValidation@587e5365]" started-at="2025-05-02T15:08:15 EDT" name="beforeTest" finished-at="2025-05-02T15:08:22 EDT" duration-ms="6891" status="PASS">
+    <test started-at="2025-05-13T17:05:40 EDT" name="Default test" finished-at="2025-05-13T17:05:44 EDT" duration-ms="4174">
+      <class name="test.interviewQuestionCodes">
+        <test-method signature="removeDuplicates()[pri:0, instance:test.interviewQuestionCodes@3d285d7e]" started-at="2025-05-13T17:05:40 EDT" name="removeDuplicates" finished-at="2025-05-13T17:05:44 EDT" duration-ms="4136" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="verifyLoginError()[pri:0, instance:test.ErrorLoginValidation@587e5365]" started-at="2025-05-02T15:08:22 EDT" name="verifyLoginError" finished-at="2025-05-02T15:08:24 EDT" duration-ms="2170" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginError -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:test.ErrorLoginValidation@587e5365]" started-at="2025-05-02T15:08:24 EDT" name="afterTest" finished-at="2025-05-02T15:08:25 EDT" duration-ms="1007" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- test.ErrorLoginValidation -->
+        </test-method> <!-- removeDuplicates -->
+      </class> <!-- test.interviewQuestionCodes -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
