@@ -2,12 +2,17 @@ package test;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 
 import org.testng.annotations.Test;
 
 public class interviewQuestionCodes {
+	
+	Scanner scanner = new Scanner(System.in);
 
+	/*
 	//print an array with reverse order
 	@Test
 	public void reverseList() {
@@ -37,7 +42,7 @@ public class interviewQuestionCodes {
 	public void oddNumber() {
 		System.out.println("----oddNumber method----");
 		
-		Scanner scanner = new Scanner(System.in);
+		
 		
 		int x = scanner.nextInt();
 		int y = scanner.nextInt();
@@ -53,14 +58,46 @@ public class interviewQuestionCodes {
 	public void largerNumber() {
 		System.out.println("----largerNumber method----");
 		
-		Scanner scanner = new Scanner(System.in);
 		
 		int x = scanner.nextInt();
 		int y = scanner.nextInt();
 			System.out.println((x>y) ? "x is larger than y" : "y is larger than x");
 	
 	}
+	*/
 	
+	//check the string has any duplicate characters
+	 @Test
+	 public void removeDuplicates() {
+		 String word = scanner.next();
+		 scanner.close();
+		 String ch;
+		 
+		 ArrayList<String> noDuplicates = new ArrayList<>();
+		//noDuplicates.add(""+word.charAt(0)); //T
+
+		 for (int i = 0; i < word.length(); i++) {
+			 
+			 ch = ""+ word.charAt(i);
+			 if (!noDuplicates.contains(ch)) {
+					noDuplicates.add(ch);
+				}
+//
+//			 for (int j = 0; j<noDuplicates.size(); j++) {	
+//				 System.out.println("j: "+noDuplicates.get(j));
+//				if (!ch.equalsIgnoreCase(noDuplicates.get(j))) {
+//					noDuplicates.add(ch);
+//					 System.out.println("2nd for loop"+noDuplicates);
+//
+//					break;
+//				}
+//			}
+			
+		}
+		 System.out.println(noDuplicates);
+		
+			
+		}
+	 }
 	
-	
-}
+
