@@ -3,8 +3,10 @@ package test;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
 import org.testng.annotations.Test;
 
@@ -12,14 +14,15 @@ public class interviewQuestionCodes {
 	
 	Scanner scanner = new Scanner(System.in);
 
-	/*
+	
 	//print an array with reverse order
 	@Test
 	public void reverseList() {
+		System.out.println("----Array list reverse numbers method----");
 		ArrayList<Integer> arrayNumbers = new ArrayList<>();
 		arrayNumbers.add(10);
 		arrayNumbers.add(30);
-		arrayNumbers.add(20);
+		arrayNumbers.add(10);
 		arrayNumbers.add(15);
 		System.out.println(arrayNumbers);
 		
@@ -64,7 +67,7 @@ public class interviewQuestionCodes {
 			System.out.println((x>y) ? "x is larger than y" : "y is larger than x");
 	
 	}
-	*/
+	
 	
 	//check the string has any duplicate characters
 	 @Test
@@ -81,23 +84,67 @@ public class interviewQuestionCodes {
 			 ch = ""+ word.charAt(i);
 			 if (!noDuplicates.contains(ch)) {
 					noDuplicates.add(ch);
-				}
-//
-//			 for (int j = 0; j<noDuplicates.size(); j++) {	
-//				 System.out.println("j: "+noDuplicates.get(j));
-//				if (!ch.equalsIgnoreCase(noDuplicates.get(j))) {
-//					noDuplicates.add(ch);
-//					 System.out.println("2nd for loop"+noDuplicates);
-//
-//					break;
-//				}
-//			}
-			
+				}			
 		}
 		 System.out.println(noDuplicates);
 		
 			
 		}
+	 
+	 @Test
+	 public void hashSetRemoveDuplicates() {
+		 String word = "bainana";
+		 System.out.println(duplicatesRemoved(word));
 	 }
+
+	private static Set<String> duplicatesRemoved(String word) {
+		Set<String> uniqueChar = new LinkedHashSet<String>();
+		for(char c: word.toCharArray()) {
+			uniqueChar.add(""+c);
+		}
+		//if we need to print the word without the array, use the StringBuilder and append and convert toString to return a String
+//		StringBuilder result = new StringBuilder();
+//		for(char c:uniqueChar) {
+//			result.append(c);
+//		}
+//		return result.toString();
+		return uniqueChar;
+	}
+	 
+	//printing fibonacci - 1 way of coding
+	@Test
+	public void printFibonacci1() {
+		int n1 = 0;
+		int n2 = 1;
+		int n3;
+		int count = 10;
+		
+		System.out.print(n1+", "+n2);
+		for(int i=1; i<count-1; i++) {
+			n3 = n1+n2;
+			System.out.print(", "+n3);
+			n1=n2;
+			n2=n3;
+		}
+	}
+	
+	//printing fibonacci - 2nd way of coding
+	@Test
+	public void printFibonacci2() {
+        int count = 10;
+        for (int i = 0; i < count; i++) {
+            System.out.print(fibonacci(i) + (i < count - 1 ? ", " : ""));
+        }
+	}
+        
+        
+    public static int fibonacci(int n) {
+	        if (n <= 1) {
+	            return n;
+	        }
+	        return fibonacci(n - 1) + fibonacci(n - 2);
+	    }
+
+}
 	
 
