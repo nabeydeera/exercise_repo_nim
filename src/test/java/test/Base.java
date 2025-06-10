@@ -27,7 +27,6 @@ public class Base{
 		browser = new BrowserNavigation();
 		browser.openbrowser("Chrome", "https://www.bravenet.com/login");
 		driver = browser.getDriver();
-		system.out.println("Testing the rebase with local");
 	}
 
 	@AfterSuite
