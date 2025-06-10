@@ -34,6 +34,7 @@ public class Base{
 	public void afterTest() {
 		browser.quitBrowser();
 		extent.flush();
+		System.out.println("Updated after suite and perform rebase");
 	}
 
 }
