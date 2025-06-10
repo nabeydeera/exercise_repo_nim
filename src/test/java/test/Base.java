@@ -27,12 +27,14 @@ public class Base{
 		browser = new BrowserNavigation();
 		browser.openbrowser("Chrome", "https://www.bravenet.com/login");
 		driver = browser.getDriver();
+
 	}
 
 	@AfterSuite
 	public void afterTest() {
 		browser.quitBrowser();
 		extent.flush();
+		
 	}
 
 }
